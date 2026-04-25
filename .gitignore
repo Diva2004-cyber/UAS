@@ -1,0 +1,42 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+
+# Dataset/evidence besar: ignore isi foldernya
+evidence_raw/**/*
+evidence_raw_documents/**/*
+evidence_acquired/copied_files/**/*
+dataset_processed/**/*
+hf_cache/**/*
+manifests/**/*
+
+# Model/output besar
+models/*.joblib
+models/*.pkl
+models/*.pt
+models/*.bin
+
+# File besar umum
+*.parquet
+*.zip
+*.rar
+*.7z
+*.jsonl
+
+# Jangan ignore foldernya
+!evidence_raw/**/
+!evidence_raw_documents/**/
+!evidence_acquired/copied_files/**/
+!dataset_processed/**/
+!models/**/
+
+# Tetap simpan placeholder folder
+!**/.gitkeep
+
+# Manifest kecil boleh ikut
+!evidence_acquired/hash_manifest.csv
+!evidence_acquired/metadata_log.csv

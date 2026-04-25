@@ -1,0 +1,45 @@
+project:
+  title: "Detection of AI-Generated Text as Digital Evidence Tampering Using Stylometric and Entropy-Based Analysis"
+  owner: "Diva Prayoga Alpariji Putra"
+  version: "0.1.0"
+
+paths:
+  evidence_raw: "evidence_raw"
+  evidence_documents: "evidence_raw/documents"
+  evidence_acquired: "evidence_acquired"
+  copied_files: "evidence_acquired/copied_files"
+  dataset_processed: "dataset_processed"
+  results: "results"
+  models: "models"
+
+domains:
+  active:
+    - "document"
+  inactive:
+    - "email"
+    - "chat"
+
+labels:
+  document:
+    - "human"
+    - "ai_generated"
+    - "mixed"
+  segment:
+    - "human"
+    - "ai_generated"
+
+forensic:
+  hash_algorithm: "sha256"
+  preserve_master_evidence: true
+
+dataset_scope:
+  current_focus: "document-only"
+  class_folders:
+    human: "human"
+    ai_generated: "ai-generated"
+    mixed: "mix"
+  supported_raw_extensions:
+    - ".csv"
+    - ".json"
+    - ".jsonl"
+    - ".parquet"

@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+nltk
+spacy
+matplotlib
+seaborn
+shap
+joblib
+python-docx
+pymupdf
+PyYAML
+pyarrow
